@@ -1,3 +1,7 @@
+//import ApexCharts from "../../../dist/apexcharts.esm.js";
+import ApexCharts from "https://code4fukui.github.io/apexcharts.js/dist/apexcharts.esm.js";
+import { DateTime } from "https://js.sabae.cc/DateTime.js";
+
 window.Apex = {
   chart: {
     foreColor: '#fff',
@@ -33,7 +37,8 @@ window.Apex = {
     theme: 'dark',
     x: {
       formatter: function (val) {
-        return moment(new Date(val)).format("HH:mm:ss")
+        //return moment(new Date(val)).format("HH:mm:ss")
+        return new DateTime(val).time.toString();
       }
     }
   },
@@ -103,7 +108,7 @@ var optionsColumn = {
               max: chartCtx.maxX
             },
             subtitle: {
-              text: parseInt(getRangeRandom({min: 1, max: 20})).toString() + '%',
+              text: parseInt(getRangeRandom({ min: 1, max: 20 })).toString() + '%',
             }
           }, false, false)
         }, 300)
@@ -539,26 +544,26 @@ window.setInterval(function () {
 
   chartColumn.updateSeries([{
     data: [...chartColumn.w.config.series[0].data,
-      [
-        chartColumn.w.globals.maxX + 300000,
-        getRandom()
-      ]
+    [
+      chartColumn.w.globals.maxX + 300000,
+      getRandom()
+    ]
     ]
   }])
 
   chartLine.updateSeries([{
     data: [...chartLine.w.config.series[0].data,
-      [
-        chartLine.w.globals.maxX + 300000,
-        getRandom()
-      ]
+    [
+      chartLine.w.globals.maxX + 300000,
+      getRandom()
+    ]
     ]
   }, {
     data: [...chartLine.w.config.series[1].data,
-      [
-        chartLine.w.globals.maxX + 300000,
-        getRandom()
-      ]
+    [
+      chartLine.w.globals.maxX + 300000,
+      getRandom()
+    ]
     ]
   }])
 

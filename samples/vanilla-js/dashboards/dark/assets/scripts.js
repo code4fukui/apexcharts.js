@@ -1,3 +1,6 @@
+//import ApexCharts from "../../../dist/apexcharts.esm.js";
+import ApexCharts from "https://code4fukui.github.io/apexcharts.js/dist/apexcharts.esm.js";
+
 window.Apex = {
   chart: {
     foreColor: '#ccc',
@@ -46,6 +49,7 @@ var spark1 = {
   }],
   stroke: {
     curve: 'smooth'
+    //curve: 'straight'
   },
   markers: {
     size: 0
@@ -248,22 +252,23 @@ var optionsLine = {
     }
   },
   stroke: {
-    curve: 'smooth',
+    //curve: 'smooth',
+    //curve: 'straight',
     width: 2
   },
   //colors: ["#3F51B5", '#2196F3'],
   series: [{
-      name: "Music",
-      data: [1, 15, 26, 20, 33, 27]
-    },
-    {
-      name: "Photos",
-      data: [3, 33, 21, 42, 19, 32]
-    },
-    {
-      name: "Files",
-      data: [0, 39, 52, 11, 29, 43]
-    }
+    name: "Music",
+    data: [1, 15, 26, 20, 33, 27]
+  },
+  {
+    name: "Photos",
+    data: [3, 33, 21, 42, 19, 32]
+  },
+  {
+    name: "Files",
+    data: [0, 39, 52, 11, 29, 43]
+  }
   ],
   title: {
     text: 'Media',
@@ -395,17 +400,17 @@ var optionsArea = {
     curve: 'straight'
   },
   series: [{
-      name: "Music",
-      data: [11, 15, 26, 20, 33, 27]
-    },
-    {
-      name: "Photos",
-      data: [32, 33, 21, 42, 19, 32]
-    },
-    {
-      name: "Files",
-      data: [20, 39, 52, 11, 29, 43]
-    }
+    name: "Music",
+    data: [11, 15, 26, 20, 33, 27]
+  },
+  {
+    name: "Photos",
+    data: [32, 33, 21, 42, 19, 32]
+  },
+  {
+    name: "Files",
+    data: [20, 39, 52, 11, 29, 43]
+  }
   ],
   xaxis: {
     categories: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2'],
