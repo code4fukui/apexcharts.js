@@ -30,6 +30,36 @@
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 31+ ✔                                                                                                                                                                                                             | 35+ ✔                                                                                                                                                                                                         | 6+ ✔                                                                                                                                                                                                          | Edge ✔                                                                                                                                                                                                 | [(IE11)](#using-it-with-ie11) ✔                                                                                                                                                                  |
 
+## Usage
+
+To create a basic bar chart with minimal configuration, write as follows:
+
+```js
+import ApexCharts from 'https://code4fukui.github.io/apexcharts.js/ApexCharts.js';
+
+const options = {
+  chart: {
+    type: 'bar'
+  },
+  series: [
+    {
+      name: 'sales',
+      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+    }
+  ],
+  xaxis: {
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+  }
+};
+
+const chart = new ApexCharts(document.querySelector('#chart'), options);
+chart.render();
+```
+
+This will render the following chart
+
+<p align="center"><a href="https://apexcharts.com/javascript-chart-demos/column-charts/"><img src="https://apexcharts.com/media/first-bar-chart.svg"></a></p>
+
 ## Download and Installation
 
 ##### Installing via npm
@@ -63,38 +93,6 @@ Useful links to wrappers other than the popular frameworks mentioned above
 - [blazor-apexcharts](https://github.com/apexcharts/Blazor-ApexCharts) - Blazor wrapper for ApexCharts [demo](https://apexcharts.github.io/Blazor-ApexCharts/)
 - [svelte-apexcharts](https://github.com/galkatz373/svelte-apexcharts) - Svelte wrapper for ApexCharts
 
-
-## Usage
-
-```js
-import ApexCharts from 'apexcharts'
-```
-
-To create a basic bar chart with minimal configuration, write as follows:
-
-```js
-var options = {
-  chart: {
-    type: 'bar'
-  },
-  series: [
-    {
-      name: 'sales',
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-    }
-  ],
-  xaxis: {
-    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-  }
-}
-
-var chart = new ApexCharts(document.querySelector('#chart'), options)
-chart.render()
-```
-
-This will render the following chart
-
-<p align="center"><a href="https://apexcharts.com/javascript-chart-demos/column-charts/"><img src="https://apexcharts.com/media/first-bar-chart.svg"></a></p>
 
 ### A little more than the basic
 
